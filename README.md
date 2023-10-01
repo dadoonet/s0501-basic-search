@@ -6,7 +6,7 @@ We are starting a new Season of the Elastic Daily Byte(s) which is this time rel
 
 We will cover for example things like basic search today, but also using synonyms using the new 8.10 API, runtime fields, vector search, semantic search, Reciprocal Rank Fusion (RRF), how to connect Elastic and OpenAI...
 
-Subscribe to the YouTube channel and joins us every day during the next 3 weeks.
+Subscribe to the YouTube channel and join us every day during the next 3 weeks.
 
 ## Discuss forum
 
@@ -71,6 +71,32 @@ GET bytes-discuss/_search
 ```
 
 This is actually giving us back:
+
+```json
+{
+  "took": 1,
+  "timed_out": false,
+  "_shards": {
+    "total": 1,
+    "successful": 1,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": {
+      "value": 10000,
+      "relation": "gte"
+    },
+    "max_score": 1,
+    "hits": [
+      {
+      }
+    ]
+  }
+}
+```
+
+So we can see information about the number of shards we searched in, also the `took` information is useful when you want to know if the search is fast enough or not.
 
 ```json
 "total": {
@@ -171,7 +197,7 @@ GET bytes-discuss/_search?track_total_hits=true
 }
 ```
 
-With that you can paginate over the resultset. But note that very is a limit and in total, by default, Elasticsearch can not paginate over 10000 documents. So this works:
+With that you can paginate over the resultset. But note that there is a limit and in total, by default, Elasticsearch can not paginate after 10000 documents. So this works:
 
 ```json
 GET bytes-discuss/_search?track_total_hits=true
@@ -207,4 +233,4 @@ Although the scroll api is no longer the best practice. I'd suggest to read the 
 
 ## Closure
 
-Thank you for watching. Tomorrow we will be covering one of the key component of text search which is analysis process. Join us at the same hour of the day! Bye!
+Thank you for watching. Tomorrow we will be covering one of the key component of text search which is the **analysis** process. Join us at the same hour of the day! Bye!
