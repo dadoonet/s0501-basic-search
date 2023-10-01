@@ -1,0 +1,80 @@
+GET bytes-discuss/_doc/194052
+
+GET bytes-discuss/_search
+
+GET bytes-discuss/_search?track_total_hits=true
+
+GET bytes-discuss/_search?track_total_hits=true
+{
+  "_source": {
+    "includes": [ 
+      "title",
+      "category_name",
+      "duration",
+      "question.author",
+      "question.date",
+      "question.reads",
+      "solution.author",
+      "solution.date",
+      "solution.reads"
+    ]
+  }
+}
+
+GET bytes-discuss/_search?track_total_hits=true
+{
+  "_source": {
+    "excludes": [ "*.text" ]
+  }
+}
+
+GET bytes-discuss/_search?track_total_hits=true
+{
+  "_source": {
+    "excludes": [ "*.text" ]
+  }
+}
+
+GET bytes-discuss/_search?track_total_hits=true
+{
+  "size": 1,
+  "_source": {
+    "excludes": [ "*.text" ]
+  }
+}
+
+GET bytes-discuss/_search?track_total_hits=true
+{
+  "from": 0,
+  "size": 1,
+  "_source": {
+    "excludes": [ "*.text" ]
+  }
+}
+
+GET bytes-discuss/_search?track_total_hits=true
+{
+  "from": 1,
+  "size": 1,
+  "_source": {
+    "excludes": [ "*.text" ]
+  }
+}
+
+GET bytes-discuss/_search?track_total_hits=true
+{
+  "from": 9999,
+  "size": 1,
+  "_source": {
+    "excludes": [ "*.text" ]
+  }
+}
+
+GET bytes-discuss/_search?track_total_hits=true
+{
+  "from": 10000,
+  "size": 1,
+  "_source": {
+    "excludes": [ "*.text" ]
+  }
+}
