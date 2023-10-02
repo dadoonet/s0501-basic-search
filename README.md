@@ -12,7 +12,7 @@ Subscribe to the YouTube channel and join us every day during the next 3 weeks.
 
 <!-- https://discuss.elastic.co/search?expanded=true&q=status%3Asolved%20%23elastic-stack%3Aelasticsearch -->
 
-You are all probably very familiar with the Elastic forum named `discuss.elastic.co`. In the past we have added a plugin on it which helps people to mark a post as the answer to their question. For example, let's look at [this discussion #194052](https://discuss.elastic.co/t/194052). We can see a very nice and detailled by the way question and the post number 4 is marked as solving it.
+You are all probably very familiar with the Elastic forum named `discuss.elastic.co`. In the past we have added a plugin on it which helps people to mark a post as the answer to their question. For example, let's look at [this discussion #194052](https://discuss.elastic.co/t/194052). We can see that a long discussion happened and that the post number 16 is marked as solving it.
 
 We wrote a script which is getting all the posts that are marked as solved and we are sending that information to Elasticsearch running in Elastic Cloud (8.10.2).
 
