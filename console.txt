@@ -1,3 +1,5 @@
+GET /
+
 GET bytes-discuss/_doc/194052
 
 GET bytes-discuss/_search
@@ -7,7 +9,7 @@ GET bytes-discuss/_search?track_total_hits=true
 GET bytes-discuss/_search?track_total_hits=true
 {
   "_source": {
-    "includes": [ 
+    "includes": [
       "title",
       "category_name",
       "duration",
@@ -18,20 +20,6 @@ GET bytes-discuss/_search?track_total_hits=true
       "solution.date",
       "solution.reads"
     ]
-  }
-}
-
-GET bytes-discuss/_search?track_total_hits=true
-{
-  "_source": {
-    "excludes": [ "*.text" ]
-  }
-}
-
-GET bytes-discuss/_search?track_total_hits=true
-{
-  "_source": {
-    "excludes": [ "*.text" ]
   }
 }
 
