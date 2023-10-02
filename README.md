@@ -16,7 +16,7 @@ You are all probably very familiar with the Elastic forum named `discuss.elastic
 
 We wrote a script which is getting all the posts that are marked as solved and we are sending that information to Elasticsearch running in Elastic Cloud (8.10.2).
 
-If we open [DevTools](https://elastic-daily-bytes-s05.kb.us-central1.gcp.cloud.es.io:9243/app/dev_tools#/console), we can get that topic:
+If we open [DevTools](https://elastic-daily-bytes-s05.kb.us-central1.gcp.cloud.es.io:9243/app/dev_tools#/console), we can get that topic. And because we decided to use here the topic id as the `_id` of the document in Elasticsearch, it's super easy to view it:
 
 ```json
 GET bytes-discuss/_doc/194052
@@ -154,7 +154,7 @@ GET bytes-discuss/_search?track_total_hits=true
 If we look a bit more at the response object, that gives us a lot of useful informations:
 
 * `_index`: this is great when you are implementing a search engine on top of multiple source of data. That way you can know from which index the data is coming from. Here we are only searching in the `bytes-discuss` index.
-* `_id`: we decided to use here the topic id as the `_id` of the document. That's super handy as you can directly open the discussion just knowing the `_id`.
+* `_id`: which is here the topic id in discuss.
 * `_score`: we will cover that one from wednesday with text search. Basically, for now, I don't have any query so all documents have the same score.
 
 ## Pagination
