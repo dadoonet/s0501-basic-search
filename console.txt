@@ -25,6 +25,13 @@ GET bytes-discuss/_search?track_total_hits=true
 
 GET bytes-discuss/_search?track_total_hits=true
 {
+  "_source": {
+    "excludes": [ "*.text" ]
+  }
+}
+
+GET bytes-discuss/_search?track_total_hits=true
+{
   "size": 1,
   "_source": {
     "excludes": [ "*.text" ]
